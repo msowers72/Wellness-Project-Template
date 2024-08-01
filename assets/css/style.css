@@ -57,7 +57,7 @@ h6 {
   right: 15px;
   bottom: 15px;
   z-index: 996;
-  background: #94c045;
+  background: #213555;
   width: 40px;
   height: 40px;
   border-radius: 4px;
@@ -71,7 +71,7 @@ h6 {
 }
 
 .back-to-top:hover {
-  background: #a6ca63;
+  background: #4f709c;
   color: #fff;
 }
 
@@ -323,7 +323,7 @@ h6 {
 .navbar-mobile a:hover,
 .navbar-mobile .active,
 .navbar-mobile li:hover>a {
-  color: #94c045;
+  color: #4f709c;
 }
 
 .navbar-mobile .getstarted,
@@ -358,7 +358,7 @@ h6 {
 .navbar-mobile .dropdown ul a:hover,
 .navbar-mobile .dropdown ul .active:hover,
 .navbar-mobile .dropdown ul li:hover>a {
-  color: #94c045;
+  color: #4f709c;
 }
 
 .navbar-mobile .dropdown>.dropdown-active {
@@ -711,7 +711,7 @@ section {
 # Cta
 --------------------------------------------------------------*/
 .cta {
-  background: #86b03c;
+  background: #213555;
   padding: 50px 0;
 }
 
@@ -740,8 +740,8 @@ section {
 }
 
 .cta .cta-btn:hover {
-  background: #aacd6b;
-  border-color: #aacd6b;
+  background: #4f709c;
+  border-color: #213555;
 }
 
 /*--------------------------------------------------------------
@@ -2358,7 +2358,7 @@ section {
   padding: 0.55rem;
   outline: none;
   border: none;
-  background-color: #86b03c;
+  background-color: #213555;
   color: #fff;
   border-radius: 0px 5px 5px 0px;
   font-family: inherit;
