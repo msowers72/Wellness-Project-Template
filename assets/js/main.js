@@ -500,115 +500,115 @@ const gameData = [
 ];
 
 // display all dynamic data
-window.addEventListener("DOMContentLoaded", () => {
-  displayGameData(gameData);
+// window.addEventListener("DOMContentLoaded", () => {
+//   displayGameData(gameData);
 
   // getting unique category
-  const categories = gameData.reduce(
-      function (values, item) {
+//   const categories = gameData.reduce(
+//       function (values, item) {
 
-          if (!values.includes(item.category)) {
-              values.push(item.category);
-          }
-          return values
-      },
-      ["ALL"]
-  );
-  const categoryBtns = categories.map(function (category) {
-      return `<li><a href="#services_main" data-id="${category}">${category}</a></li>`
-  }).join("");
+//           if (!values.includes(item.category)) {
+//               values.push(item.category);
+//           }
+//           return values
+//       },
+//       ["ALL"]
+//   );
+//   const categoryBtns = categories.map(function (category) {
+//       return `<li><a href="#services_main" data-id="${category}">${category}</a></li>`
+//   }).join("");
    
-  ulEl.innerHTML = categoryBtns;
+//   ulEl.innerHTML = categoryBtns;
 
-  const linksEl = document.querySelectorAll('li a');
+//   const linksEl = document.querySelectorAll('li a');
 
-  // allows me to get the dataset.id for each category
-  linksEl.forEach((links) => {
-      links.addEventListener('click', (e) => {
-          const category = e.target.dataset.id;
-          const gameCategory = gameData.filter(function (data) {
-              if (data.category === category) {
-                  return data;
-              };
+//   // allows me to get the dataset.id for each category
+//   linksEl.forEach((links) => {
+//       links.addEventListener('click', (e) => {
+//           const category = e.target.dataset.id;
+//           const gameCategory = gameData.filter(function (data) {
+//               if (data.category === category) {
+//                   return data;
+//               };
               
-          });
-          if (category === 'ALL') {
-              displayGameData(gameData)
-          } else {
-              displayGameData(gameCategory)
-          }
-      });
-  });
-});
+//           });
+//           if (category === 'ALL') {
+//               displayGameData(gameData)
+//           } else {
+//               displayGameData(gameCategory)
+//           }
+//       });
+//   });
+// });
 
 
 
 // function to display data on page
-function displayGameData(games) {
-  let displayData = games.map(function (cat_items) {
-      return `
-              <div class="products">
-                  <div class="pr_img">
-                      <img src="${cat_items.img}" alt="">                       
-                  </div>
+// function displayGameData(games) {
+//   let displayData = games.map(function (cat_items) {
+//       return `
+//               <div class="products">
+//                   <div class="pr_img">
+//                       <img src="${cat_items.img}" alt="">                       
+//                   </div>
                  
-                  <div class="content">
-                      <h3 class="title">${cat_items.title}</h3>
-                      <p class="release_date">Release Date: ${cat_items.releaseDate}</p>
-                      <p class="price">${cat_items.price}</p>
-                  </div>
+//                   <div class="content">
+//                       <h3 class="title">${cat_items.title}</h3>
+//                       <p class="release_date">Release Date: ${cat_items.releaseDate}</p>
+//                       <p class="price">${cat_items.price}</p>
+//                   </div>
                  
-              </div>`
+//               </div>`
       
-  });
-  displayData = displayData.join("");
+//   });
+//   displayData = displayData.join("");
   
-  productContainer.innerHTML = displayData;
+//   productContainer.innerHTML = displayData;
 
-};
+// };
 
 // search
-btnEl.addEventListener('click', (e) => {
-  let searchValue = inputEl.value.toLowerCase();
+// btnEl.addEventListener('click', (e) => {
+//   let searchValue = inputEl.value.toLowerCase();
   
  
-  if (searchValue !== "") {
-      let searchCategory = gameData.filter(function (data) {
-          if (data.title.toLowerCase().includes(searchValue)) {
-              return data;
-          } else if (data.category.toLowerCase().includes(searchValue)) {
-              return data;
-          };
+//   if (searchValue !== "") {
+//       let searchCategory = gameData.filter(function (data) {
+//           if (data.title.toLowerCase().includes(searchValue)) {
+//               return data;
+//           } else if (data.category.toLowerCase().includes(searchValue)) {
+//               return data;
+//           };
           
-      });
-      if (searchCategory) {
-              displayGameData(searchCategory)
-      }
-      inputEl.value = "";
-  } else {
-      alert("Please Enter a Category!")
-  }
-});
+//       });
+//       if (searchCategory) {
+//               displayGameData(searchCategory)
+//       }
+//       inputEl.value = "";
+//   } else {
+//       alert("Please Enter a Category!")
+//   }
+// });
 
-inputEl.addEventListener("keypress", function(event) {
-  let searchValue = inputEl.value.toLowerCase();
+// inputEl.addEventListener("keypress", function(event) {
+//   let searchValue = inputEl.value.toLowerCase();
 
-  if (event.key === "Enter" && searchValue !== "") {
-    event.preventDefault();
+//   if (event.key === "Enter" && searchValue !== "") {
+//     event.preventDefault();
 
-    let searchCategory = gameData.filter(function (data) {
-      if (data.title.toLowerCase().includes(searchValue)) {
-          return data;
-      } else if (data.category.toLowerCase().includes(searchValue)) {
-          return data;
-      };
+//     let searchCategory = gameData.filter(function (data) {
+//       if (data.title.toLowerCase().includes(searchValue)) {
+//           return data;
+//       } else if (data.category.toLowerCase().includes(searchValue)) {
+//           return data;
+//       };
       
-  });
-  if (searchCategory) {
-    displayGameData(searchCategory)
-}
-inputEl.value = "";
+//   });
+//   if (searchCategory) {
+//     displayGameData(searchCategory)
+// }
+// inputEl.value = "";
 
-    console.log(searchCategory)
-  } 
-});
+//     console.log(searchCategory)
+//   } 
+// });
