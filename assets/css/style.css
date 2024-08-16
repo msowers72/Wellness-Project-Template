@@ -451,15 +451,25 @@ h6 {
   color: #fff;
 }
 
+.no-break {
+  display: none;
+}
+
 @media (min-width: 1024px) {
   #hero {
     background-attachment: fixed;
   }
 }
 
+
+
 @media (max-width: 768px) {
   #hero {
     height: 100vh;
+  }
+
+  #hero.w-hero {
+    height: 75vh;
   }
 
   #hero h1 {
@@ -471,6 +481,10 @@ h6 {
     font-size: 18px;
     line-height: 24px;
     margin-bottom: 30px;
+    max-width: 450px;
+  }
+  .no-break {
+    display: block;
   }
 
   #hero .hero-container {
@@ -482,7 +496,23 @@ h6 {
   #hero {
     height: 120vh;
   }
+   
 }
+
+@media (max-width: 500px) {
+  #hero h2 {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 375px) {
+  #hero h2 {
+    font-size: 15px;
+  }
+}
+
+
+
 
 /*--------------------------------------------------------------
 # Sections General
@@ -2495,3 +2525,4 @@ ul .custom-drop.li .custom-link a {
    
 }
 }
+
