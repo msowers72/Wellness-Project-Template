@@ -469,7 +469,7 @@ h6 {
   }
 
   #hero.w-hero {
-    height: 75vh;
+    height: 60vh;
   }
 
   #hero h1 {
@@ -502,6 +502,10 @@ h6 {
 @media (max-width: 500px) {
   #hero h2 {
     font-size: 16px;
+  }
+
+  .my-custom {
+    padding-left: 25px;
   }
 }
 
