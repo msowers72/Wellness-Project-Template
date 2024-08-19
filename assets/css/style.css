@@ -499,6 +499,25 @@ h6 {
    
 }
 
+@media(max-width: 430px) {
+  #hero {
+    height: 60vh;
+  }
+}
+
+@media(max-width: 430px) {
+  #hero.w-hero {
+    height: 55vh;
+  }
+}
+
+@media(max-width: 390px) {
+  #hero {
+    height: 70vh;
+}
+}
+
+
 @media (max-width: 500px) {
   #hero h2 {
     font-size: 16px;
@@ -511,7 +530,7 @@ h6 {
 
 @media (max-width: 375px) {
   #hero h2 {
-    font-size: 15px;
+    font-size: 14px;
   }
 }
 
